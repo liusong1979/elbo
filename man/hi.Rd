@@ -4,11 +4,14 @@
 \alias{hi}
 \title{Help start conversations}
 \usage{
-hi(who)
+hi(who, how = c("shout", "whisper"))
 }
 \arguments{
 \item{who}{character(1) The name of the person who you wish to start
 a conversation with,}
+
+\item{how}{character(1) How to greet the conversant. Either "shout" (default)
+or "whisper"}
 }
 \value{
 character(1) A kine if text to be used when starting conversations.

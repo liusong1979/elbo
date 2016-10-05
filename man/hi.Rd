@@ -19,5 +19,6 @@ This function ...
 \examples{
  hi("Song Liu")
 
+
 }
 

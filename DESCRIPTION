@@ -1,6 +1,6 @@
 Package: Elbo
 Title: Implements useful utilities for my Personal Use
-Version: 0.0.3
+Version: 0.1.1
 Authors@R: person("Song", "Liu",
   email = "song.liu@roswellpark.org",
   role = c("aut", "cre"))

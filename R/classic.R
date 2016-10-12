@@ -15,7 +15,7 @@
 #'
 #' @export
 
-input_classic <- function(data_file, exprs_file){
+input_classic <- function(pdata_file, exprs_file){
   pdata <-read.csv(pdata_file, row.names = 1, check.names = FALSE)
   exprs = read.csv(exprs_file, row.names = 1, check.names = FALSE)
 

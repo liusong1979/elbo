@@ -4,12 +4,12 @@
 \alias{input_classic}
 \title{Classic R approaches to data analysis}
 \usage{
-input_classic(data_file, exprs_file)
+input_classic(pdata_file, exprs_file)
 }
 \arguments{
-\item{data_file}{character(1) The path to the pheno data file.}
-
 \item{exprs_file}{character(1) The path to the expression file.}
+
+\item{data_file}{character(1) The path to the pheno data file.}
 }
 \value{
 A data.frame containing samples as rows and phenotype data and

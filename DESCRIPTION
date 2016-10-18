@@ -1,13 +1,16 @@
 Package: Elbo
 Title: Implements useful utilities for my Personal Use
-Version: 0.1.1
+Version: 0.2.1
 Authors@R: person("Song", "Liu",
   email = "song.liu@roswellpark.org",
   role = c("aut", "cre"))
 Description: This is an amazing package that I've invested ....
 Depends:
-    R (>= 3.3.1), magrittr, dplyr, SummarizedExperiment
+    R (>= 3.3.1)
+Imports:
+    magrittr, dplyr, SummarizedExperiment, reshape2
 License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1
+Suggests: testthat

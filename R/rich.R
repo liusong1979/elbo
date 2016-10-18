@@ -1,27 +1,30 @@
 #' Rich data inout
-#' 
+#'
 #' Capture the semantic meaning of the data that
 #' we represent. For instance, separately
 #' recognizing the 'phenotypic' data (descrbing
-#' the samples) and the 'expression' values 
+#' the samples) and the 'expression' values
 #' (derived from, e.g., microarray or RNAseq
 #' experiment).
-#' 
-#' @param pdata_file phenotype file 
-#' 
+#'
+#' @param pdata_file phenotype file
+#'
 #' @param exprs_file gene expression data file
-#' 
-#' @return A SummariedExperiment() containing samples as colData(), and the 
+#'
+#' @return A SummariedExperiment() containing samples as colData(), and the
 #' expression value as assay().
-#' 
+#'
 #' @importFrom SummarizedExperiment SummarizedExperiment
-#' 
+#' @importFrom utils read.csv
+#'
 #' @export
 #'
 input_rich <- function(pdata_file, exprs_file){
+  stopifnot(is_scalar_character(pdata_file))
+  stopifnot(is_scalar_character(exprs_file))
   pdata <- read.csv(pdata_file, row.names =1, check.names = FALSE)
   exprs <- read.csv(exprs_file, row.names =1, check.names = FALSE)
-  
+
   SummarizedExperiment(as.matrix(exprs), colData=pdata)
-  
+
 }
